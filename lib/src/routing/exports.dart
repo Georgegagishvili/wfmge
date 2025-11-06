@@ -4,3 +4,9 @@
  * To regenerate, run `dart run .\scripts\export_generator.dart`
  */
 
+export 'package:wfmge/src/routing/app_router.dart';
+export 'package:wfmge/src/routing/observer.dart';
+
+export 'package:wfmge/src/routing/models/app_route.dart';
+export 'package:wfmge/src/routing/models/go_router_refresh_notifier.dart';
+export 'package:wfmge/src/routing/models/route_page_view_data.dart';

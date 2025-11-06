@@ -4,4 +4,9 @@
  * To regenerate, run `dart run .\scripts\export_generator.dart`
  */
 
+export 'package:wfmge/src/utils/config/logger.dart';
+
+export 'package:wfmge/src/utils/helpers/bloc_transformers.dart';
+export 'package:wfmge/src/utils/helpers/validator.dart';
+
 export 'package:wfmge/src/utils/service_locator/service_locator.dart';
