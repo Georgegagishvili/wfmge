@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wfmge/src/commons/exports.dart';
 
-final lightTextStyles = CustomTextStyles.themed(color: darkColors.textPrimary);
+final lightTextStyles = CustomTextStyles.themed(color: lightColors.textPrimary);
 final darkTextStyles = CustomTextStyles.themed(color: darkColors.textPrimary);
 
 class BaseTypography {
@@ -43,10 +43,7 @@ class BaseTypography {
     fontFamily: fontFamily,
   );
 
-  static const TextStyle body = TextStyle(
-    fontSize: 16,
-    fontFamily: fontFamily,
-  );
+  static const TextStyle body = TextStyle(fontSize: 16, fontFamily: fontFamily);
 
   static const TextStyle small = TextStyle(
     fontSize: 14,
@@ -70,9 +67,14 @@ final class CustomTextStyles extends ThemeExtension<CustomTextStyles> {
   const CustomTextStyles({this.color});
 
   // Map BaseTypography styles to dynamic colors
-  TextStyle get displayLarge => BaseTypography.displayLarge.copyWith(color: color);
-  TextStyle get displayMedium => BaseTypography.displayMedium.copyWith(color: color);
+  TextStyle get displayLarge =>
+      BaseTypography.displayLarge.copyWith(color: color);
+
+  TextStyle get displayMedium =>
+      BaseTypography.displayMedium.copyWith(color: color);
+
   TextStyle get headline => BaseTypography.headline.copyWith(color: color);
+
   TextStyle get title => BaseTypography.title.copyWith(color: color);
 
   TextStyle get titleRiffic => BaseTypography.title.copyWith(
@@ -83,6 +85,7 @@ final class CustomTextStyles extends ThemeExtension<CustomTextStyles> {
   );
 
   TextStyle get subtitle => BaseTypography.subtitle.copyWith(color: color);
+
   TextStyle get body => BaseTypography.body.copyWith(color: color);
 
   TextStyle get small => BaseTypography.small.copyWith(color: color);
@@ -94,6 +97,7 @@ final class CustomTextStyles extends ThemeExtension<CustomTextStyles> {
   );
 
   TextStyle get footnote => BaseTypography.footnote.copyWith(color: color);
+
   TextStyle get micro => BaseTypography.micro.copyWith(color: color);
 
   @override
@@ -107,5 +111,6 @@ final class CustomTextStyles extends ThemeExtension<CustomTextStyles> {
     return CustomTextStyles(color: Color.lerp(color, other.color, t));
   }
 
-  static CustomTextStyles themed({Color? color}) => CustomTextStyles(color: color);
+  static CustomTextStyles themed({Color? color}) =>
+      CustomTextStyles(color: color);
 }
